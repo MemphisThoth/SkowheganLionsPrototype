@@ -1,0 +1,32 @@
+{
+  "name": "skowheganlionsprototype",
+  "version": "1.0.0",
+  "description": "A website for the Skowhegan Lions Club powered by 11ty",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --watch",
+    "build:css": "postcss pcss/input.css -o _source/assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MemphisThoth/SkowheganLionsPrototype.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MemphisThoth/SkowheganLionsPrototype/issues"
+  },
+  "homepage": "https://github.com/MemphisThoth/SkowheganLionsPrototype#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.6.2",
+    "cssnano": "^9.9.0",
+    "postcss": "^8.5.32",
+    "postcss-cli": "^12.0.0",
+    "postcss-import": "^17.0.1",
+    "postcss-preset-env": "^11.6.2"
+  }
+}

@@ -1,0 +1,16 @@
+.site-footer { background: #081b31; color: white; padding: 2.8rem 0 1.2rem; }
+.footer-main { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-bottom: 2.5rem; }
+.brand-footer { color: white; }
+.brand-footer .brand-mark { color: white; border-color: var(--gold); }
+.brand-footer .brand-mark:before, .brand-footer .brand-mark:after { border-color: var(--gold); }
+.brand-footer .brand-copy { color: white; }
+.footer-main > p { color: #aebdcd; font-size: .82rem; margin: 0; }
+.back-top { color: var(--gold); font-size: .65rem; letter-spacing: .15em; font-weight: 700; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.15); padding-top: 1.2rem; display: flex; justify-content: space-between; gap: 1rem; color: #8194a9; font-size: .67rem; }
+
+.footer-logo {
+  width: auto;
+  max-width: 160px;
+  height: 65px;
+  object-fit: contain;
+}

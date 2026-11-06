@@ -1,0 +1,36 @@
+@media (max-width: 991.98px) {
+  .navbar-shell { min-height: 74px; }
+  .menu-toggle { display: flex; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 1rem 1.5rem 1.5rem; box-shadow: 0 14px 20px rgba(9,30,52,.12); flex-direction: column; align-items: stretch; gap: 0; }
+  .nav-links.is-open { display: flex; }
+  .nav-links a { padding: .9rem .3rem; border-bottom: 1px solid #edf0f3; }
+  .nav-links .nav-contact { border: 0; padding: .9rem .3rem; }
+  .hero { min-height: 620px; height: auto; }
+  .section-pad { padding: 5.5rem 0; }
+  .section-topline { align-items: flex-start; flex-direction: column; gap: 1.5rem; }
+  .membership-panel { padding: 4rem 3rem; }
+}
+@media (max-width: 767.98px) {
+  .top-strip-note { display: none; }
+  .top-strip { font-size: .66rem; }
+  .hero { min-height: 620px; }
+  .hero-shade { background: linear-gradient(90deg, rgba(8,27,49,.91), rgba(8,27,49,.48)), linear-gradient(0deg, rgba(8,27,49,.35), transparent); }
+  .hero h1 { font-size: clamp(2.7rem, 12vw, 4.3rem); }
+  .hero-lead { font-size: .98rem; }
+  .hero-footnote { margin-top: 4rem; }
+  .hero-side-label { display: none; }
+  .section-pad { padding: 4.5rem 0; }
+  .intro-rule { margin: 3rem 0 2rem; }
+  .service-card { min-height: 390px; }
+  .event-card { grid-template-columns: 1fr; }
+  .event-art { min-height: 180px; }
+  .membership-section { grid-template-columns: 1fr; }
+  .membership-image { min-height: 300px; }
+  .membership-panel { padding: 4rem 1.5rem; }
+  .footer-main, .footer-bottom { align-items: flex-start; flex-direction: column; }
+  .footer-main { gap: 1.2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

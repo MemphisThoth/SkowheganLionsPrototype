@@ -1,0 +1,15 @@
+/* Custom Properties Styles */
+
+:root {
+  --navy: #102b4e;
+  --navy-deep: #0b203a;
+  --blue: #1c4774;
+  --gold: #f5c443;
+  --gold-deep: #e8b52d;
+  --ink: #17283b;
+  --muted: #647386;
+  --paper: #f8f7f3;
+  --white: #fff;
+  --bs-body-font-family: "DM Sans", system-ui, sans-serif;
+  --bs-body-color: var(--ink);
+}

@@ -1,0 +1,94 @@
+---
+title: Photo Gallery | Skowhegan Lions Club
+permalink: /gallery/index.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "partials/head.njk" %}
+</head>
+<body>
+
+  {% include "partials/header.njk" %}
+
+  <main>
+    <section class="gallery-hero">
+      <div class="container">
+        <span class="section-eyebrow">Our Club in Action</span>
+        <h1>Photo Gallery</h1>
+        <p>
+          A look at the people, projects, and community activities
+          that make the Skowhegan Lions Club special.
+        </p>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+
+        <div class="gallery-intro">
+          <h2>Serving Our Community Together</h2>
+          <p>
+            Take a look at some of the ways our members support
+            Skowhegan and the surrounding communities.
+          </p>
+        </div>
+
+        <div class="photo-grid">
+          {% for photo in collections.photos %}
+            <button
+              class="photo-card"
+              type="button"
+              data-full="{{ photo.data.full }}"
+              data-title="{{ photo.data.title }}"
+              data-description="{{ photo.data.description }}"
+              aria-label="View {{ photo.data.title }}"
+            >
+              <img
+                src="{{ photo.data.thumbnail }}"
+                alt="{{ photo.data.title }}"
+                loading="lazy"
+              >
+
+              <div class="photo-card-caption">
+                <h3>{{ photo.data.title }}</h3>
+                {% if photo.data.description %}
+                  <p>{{ photo.data.description }}</p>
+                {% endif %}
+              </div>
+            </button>
+          {% endfor %}
+        </div>
+
+        {% if collections.photos.length == 0 %}
+          <p class="gallery-empty">
+            Photos will be added soon. Please check back!
+          </p>
+        {% endif %}
+
+      </div>
+    </section>
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close gallery">&times;</button>
+    <button class="lightbox-prev" type="button" aria-label="Previous photo">&#10094;</button>
+
+    <div class="lightbox-content">
+      <img class="lightbox-image" src="" alt="">
+      <div class="lightbox-caption">
+        <h3 class="lightbox-title"></h3>
+        <p class="lightbox-description"></p>
+      </div>
+    </div>
+
+    <button class="lightbox-next" type="button" aria-label="Next photo">&#10095;</button>
+  </div>
+
+  <script src="/assets/js/gallery.js"></script>
+
+</body>
+</html>

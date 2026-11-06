@@ -1,0 +1,238 @@
+
+/* ========================================
+   PHOTO GALLERY
+======================================== */
+
+.gallery-hero {
+  background: #102b4e;
+  color: #fff;
+  padding: 85px 0;
+  text-align: center;
+}
+
+.gallery-hero h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.gallery-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.section-eyebrow {
+  color: #d5ad55;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.gallery-section {
+  padding: 75px 0;
+  background: #f7f8fa;
+}
+
+.gallery-intro {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.gallery-intro h2 {
+  color: #102b4e;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.gallery-intro p {
+  color: #667085;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.photo-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(16, 43, 78, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(16, 43, 78, 0.15);
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+}
+
+.photo-card-caption {
+  padding: 20px;
+}
+
+.photo-card-caption h3 {
+  color: #102b4e;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.photo-card-caption p {
+  color: #667085;
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.gallery-empty {
+  text-align: center;
+  color: #667085;
+  padding: 40px 0;
+}
+
+/* ========================================
+   LIGHTBOX
+======================================== */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(5, 15, 30, 0.95);
+  align-items: center;
+  justify-content: center;
+  padding: 50px 80px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+}
+
+.lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  color: #fff;
+  margin-top: 18px;
+}
+
+.lightbox-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.lightbox-description {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  line-height: 1;
+  padding: 10px;
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 30px;
+}
+
+.lightbox-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: #d5ad55;
+}
+
+@media (max-width: 991px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .gallery-hero {
+    padding: 60px 20px;
+  }
+
+  .gallery-section {
+    padding: 50px 0;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card img {
+    height: 230px;
+  }
+
+  .lightbox {
+    padding: 50px 15px;
+  }
+
+  .lightbox-prev {
+    left: 0;
+  }
+
+  .lightbox-next {
+    right: 0;
+  }
+
+  .lightbox-image {
+    max-height: 65vh;
+  }
+}

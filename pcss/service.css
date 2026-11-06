@@ -1,0 +1,214 @@
+
+/* ========================================
+   WHAT WE DO / SERVICE PAGE
+======================================== */
+
+.service-hero {
+  background: #102b4e;
+  color: #fff;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.service-hero h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  max-width: 850px;
+  margin: 15px auto;
+}
+
+.service-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.service-intro {
+  padding: 75px 20px;
+  background: #fff;
+}
+
+.service-intro-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-intro h2,
+.service-section-heading h2 {
+  color: #102b4e;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.service-intro p {
+  color: #667085;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.service-section {
+  padding: 75px 20px;
+  background: #fff;
+}
+
+.service-section-alt {
+  background: #f4f6f9;
+}
+
+.service-section-heading {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.service-section-heading h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.service-section-heading p {
+  color: #667085;
+  line-height: 1.7;
+}
+
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(16, 43, 78, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(16, 43, 78, 0.1);
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.service-card h3 {
+  color: #102b4e;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #667085;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.charity-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.charity-item {
+  background: #f4f6f9;
+  border-left: 4px solid #c49a3a;
+  border-radius: 8px;
+  padding: 22px 25px;
+}
+
+.charity-item h3 {
+  color: #102b4e;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.charity-item p {
+  color: #667085;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.service-cta {
+  background: #102b4e;
+  color: #fff;
+  padding: 75px 20px;
+  text-align: center;
+}
+
+.service-cta h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.service-cta p {
+  max-width: 650px;
+  margin: 0 auto 28px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.service-cta-button {
+  display: inline-block;
+  background: #c49a3a;
+  color: #102b4e;
+  border: 2px solid #c49a3a;
+  border-radius: 6px;
+  padding: 13px 28px;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.service-cta-button:hover {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Responsive layouts */
+
+@media (max-width: 991px) {
+  .service-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .service-hero {
+    padding: 65px 20px;
+  }
+
+  .service-intro,
+  .service-section {
+    padding: 55px 20px;
+  }
+
+  .service-card-grid,
+  .charity-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+
+  .service-cta {
+    padding: 60px 20px;
+  }
+}

@@ -1,0 +1,57 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { margin: 0; background: var(--paper); }
+a { text-decoration: none; }
+
+
+.section-pad { padding: 7rem 0; }
+.section-heading { font: 800 clamp(2.5rem, 4.6vw, 4.1rem)/1.08 "Manrope", sans-serif; color: var(--navy); letter-spacing: -.06em; margin: 0; }
+.section-heading span { color: #9babbc; }
+.intro-copy { font-size: 1.08rem; line-height: 1.85; color: #56677a; margin: 0 0 1.5rem; }
+.underlined-link { color: var(--navy); font-size: .83rem; font-weight: 700; display: inline-flex; gap: 1.2rem; border-bottom: 1px solid #b9c4cf; padding-bottom: .55rem; }
+.underlined-link span { color: #b78300; }
+.intro-rule { height: 1px; background: #dfe3e5; margin: 5rem 0 2.5rem; }
+.stat-number { font: 800 1.25rem "Manrope", sans-serif; color: var(--navy); letter-spacing: .02em; }
+.stat-label { font-size: .83rem; color: #718092; margin-top: .35rem; }
+
+.site-logo {
+  width: auto;
+  height: 65px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0b2345;
+}
+
+@media (max-width: 576px) {
+  .site-logo {
+    height: 48px;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+}
+
+.site-header {
+  background-color: #ffffff;
+  color: #0b2345;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.site-header .navbar {
+  background-color: #ffffff;
+}
+
+.site-header .navbar-brand,
+.site-header .nav-links a:not(.nav-contact) {
+  color: #0b2345;
+}
+
+.site-header .nav-links a:hover {
+  color: #d4a017;
+}
